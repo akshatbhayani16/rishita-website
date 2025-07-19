@@ -1,0 +1,21 @@
+.about-page {
+  max-width: 700px;
+  margin: 2.5rem auto;
+  padding: 2rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.about-page h2 {
+  color: #b48a78;
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+}
+
+.about-page p {
+  color: #444;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+} 
