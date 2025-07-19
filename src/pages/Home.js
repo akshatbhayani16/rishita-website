@@ -82,21 +82,6 @@ const Home = () => (
       </div>
     </section>
 
-    {/* Featured Products Section */}
-    <section className="home-products-section products-modern">
-      <h2>Featured Products</h2>
-      <div className="home-products-grid">
-        {products.map((product, idx) => (
-          <div className="home-product-card product-modern" key={idx}>
-            <img src={product.image} alt={product.name} />
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-          </div>
-        ))}
-      </div>
-      <a href="/products" className="products-link">View All Products</a>
-    </section>
-
     {/* Footer Section */}
     <footer className="home-footer footer-modern animated-footer">
       <div className="footer-accent-bar" />
