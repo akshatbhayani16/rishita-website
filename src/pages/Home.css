@@ -1,51 +1,496 @@
-.home-hero {
-  background: linear-gradient(120deg, #fbeee6 0%, #f7cac9 100%);
-  min-height: 60vh;
+.home-root {
+  width: 100%;
+  min-height: 100vh;
+  background: #fbeee6;
+}
+
+.home-hero-modern {
+  position: relative;
+  min-height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: url('https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(244, 232, 224, 0.65);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
   padding: 3rem 1rem;
 }
 
-.home-hero-content {
-  text-align: center;
-  max-width: 600px;
-}
-
-.home-hero-content h1 {
-  font-size: 2.8rem;
+.brand-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
   color: #b48a78;
-  margin-bottom: 1rem;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  margin-bottom: 0.7rem;
+  font-weight: 700;
 }
 
-.home-hero-content p {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 2rem;
+.brand-tagline {
+  font-size: 1.4rem;
+  color: #222;
+  margin-bottom: 2.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
 }
 
-.hero-btn {
+.hero-btn-modern {
   background: #b48a78;
   color: #fff;
-  padding: 0.8rem 2.2rem;
+  padding: 1rem 2.5rem;
   border: none;
-  border-radius: 25px;
-  font-size: 1.1rem;
+  border-radius: 30px;
+  font-size: 1.15rem;
   text-decoration: none;
-  transition: background 0.2s;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  transition: background 0.2s, transform 0.2s;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.hero-btn-modern:hover {
+  background: #a06c5a;
+  transform: translateY(-2px) scale(1.04);
 }
 
-.hero-btn:hover {
+/* About Us Modern Section */
+.about-modern {
+  background: linear-gradient(90deg, #fbeee6 60%, #f7cac9 100%);
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 2px 12px rgba(180,138,120,0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-modern-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 3.5rem 1rem 3.5rem 1rem;
+  gap: 2.5rem;
+}
+.about-modern-image {
+  flex: 1 1 320px;
+  min-width: 220px;
+  max-width: 400px;
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(180,138,120,0.10);
+}
+.about-modern-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.93) contrast(1.08);
+  transition: transform 0.3s;
+}
+.about-modern-image img:hover {
+  transform: scale(1.04) rotate(-1deg);
+}
+.about-modern-content {
+  flex: 2 1 400px;
+  text-align: left;
+  padding-left: 1.5rem;
+}
+.about-modern-content h2 {
+  color: #b48a78;
+  font-size: 2.2rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.1rem;
+  letter-spacing: 1px;
+}
+.about-modern-content p {
+  color: #444;
+  font-size: 1.18rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+.about-link {
+  display: inline-block;
+  background: #b48a78;
+  color: #fff;
+  padding: 0.7rem 2rem;
+  border-radius: 22px;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(180,138,120,0.10);
+}
+.about-link:hover {
   background: #a06c5a;
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+  .about-modern-inner {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2.5rem 1rem 2.5rem 1rem;
+  }
+  .about-modern-content {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+/* Discover Section - Modern Enhancements */
+.discover-modern {
+  background: linear-gradient(120deg, #fff 60%, #fbeee6 100%);
+  border-radius: 32px;
+  box-shadow: 0 4px 24px rgba(180,138,120,0.08);
+  margin-bottom: 2.5rem;
+  padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: visible;
+}
+.discover-modern h2 {
+  font-size: 2.2rem;
+  color: #b48a78;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1.1rem;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+.brand-story {
+  color: #444;
+  font-size: 1.18rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 1.7;
+}
+.featured-grid {
+  display: flex;
+  gap: 2.2rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.featured-card {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(180,138,120,0.10);
+  overflow: hidden;
+  transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+  cursor: pointer;
+  min-width: 220px;
+  max-width: 300px;
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #f7cac9;
+  position: relative;
+}
+.featured-card:hover {
+  box-shadow: 0 8px 32px rgba(180,138,120,0.18);
+  border: 2px solid #b48a78;
+  transform: translateY(-6px) scale(1.04);
+}
+.featured-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+  border-radius: 18px 18px 0 0;
+  transition: filter 0.2s;
+}
+.featured-card:hover img {
+  filter: brightness(0.93) contrast(1.08);
+}
+.featured-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.13rem;
+  color: #b48a78;
+  font-weight: 600;
+  padding: 1.1rem 0 1rem 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+  .discover-modern {
+    padding: 2.2rem 0.7rem 1.5rem 0.7rem;
+    border-radius: 18px;
+  }
+  .featured-grid {
+    gap: 1.1rem;
+  }
+}
+@media (max-width: 700px) {
+  .discover-modern {
+    padding: 1.2rem 0.2rem 0.7rem 0.2rem;
+    border-radius: 12px;
+  }
+  .featured-grid {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 1.1rem;
+    padding-bottom: 0.5rem;
+  }
+  .featured-card {
+    min-width: 180px;
+    max-width: 220px;
+    flex: 0 0 180px;
+  }
+  .featured-card img {
+    height: 120px;
+  }
+}
+
+/* Products Section - Modern Enhancements */
+.products-modern {
+  background: linear-gradient(90deg, #f7cac9 60%, #fbeee6 100%);
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 2px 12px rgba(180,138,120,0.04);
+  margin-bottom: 2.5rem;
+}
+.product-modern {
+  border: 2px solid #fbeee6;
+  box-shadow: 0 2px 12px rgba(180,138,120,0.07);
+  border-radius: 16px;
+  background: #fff;
+  transition: border 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.product-modern:hover {
+  border: 2px solid #b48a78;
+  box-shadow: 0 6px 24px rgba(180,138,120,0.13);
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* Footer - Modern Enhancements */
+.footer-modern {
+  background: linear-gradient(120deg, #fff 60%, #fbeee6 100%);
+  border-top: none;
+  border-radius: 32px 32px 0 0;
+  box-shadow: 0 -2px 24px rgba(180,138,120,0.10);
+  position: relative;
+  overflow: hidden;
+  animation: footerFadeIn 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+  margin-top: 3rem;
+}
+
+.footer-accent-bar {
+  width: 100%;
+  height: 7px;
+  background: linear-gradient(90deg, #b48a78 0%, #f7cac9 100%);
+  margin-bottom: 2.2rem;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 2px 8px rgba(180,138,120,0.10);
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  color: #b48a78;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  letter-spacing: 2.5px;
+  animation: fadeInUp 0.8s 0.1s both;
+  text-align: center;
+}
+.footer-slogan {
+  color: #fff;
+  background: linear-gradient(90deg, #b48a78 60%, #f7cac9 100%);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  border-radius: 18px;
+  padding: 0.3rem 1.2rem;
+  display: inline-block;
+  animation: fadeInUp 0.8s 0.2s both;
+}
+
+.footer-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  animation: fadeInUp 0.8s 0.3s both;
+}
+.footer-social-link {
+  color: #fff;
+  background: linear-gradient(135deg, #b48a78 60%, #f7cac9 100%);
+  font-size: 1.3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(180,138,120,0.10);
+  transition: background 0.2s, color 0.2s, transform 0.3s;
+  position: relative;
+  will-change: transform;
+}
+.footer-social-link:hover {
+  background: linear-gradient(135deg, #f7cac9 60%, #b48a78 100%);
+  color: #b48a78;
+  transform: scale(1.18) rotate(-8deg);
+  animation: socialBounce 0.5s;
+}
+
+.animated-links {
+  display: flex;
+  justify-content: center;
+  gap: 2.2rem;
+  margin-bottom: 1.1rem;
+  width: 100%;
+}
+.animated-links a {
+  color: #b48a78;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.08rem;
+  position: relative;
+  transition: color 0.2s;
+  padding-bottom: 2px;
+  animation: fadeInUp 0.8s 0.4s both;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.animated-links a:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #b48a78 60%, #f7cac9 100%);
+  transition: width 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 2px;
+}
+.animated-links a:hover:after {
+  width: 100%;
+}
+.animated-links a:hover {
+  color: #a06c5a;
+}
+
+.footer-copy {
+  color: #b48a78;
+  font-size: 1.01rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 1.2rem;
+  animation: fadeInUp 0.8s 0.5s both;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+@keyframes footerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 700px) {
-  .home-hero-content h1 {
-    font-size: 2rem;
+  .brand-title {
+    font-size: 2.1rem;
   }
-  .home-hero-content p {
+  .brand-tagline {
     font-size: 1rem;
+  }
+  .featured-card img {
+    height: 120px;
+  }
+  .about-summary-section h2,
+  .home-products-section h2 {
+    font-size: 1.3rem;
+  }
+  .home-product-card img {
+    height: 90px;
+  }
+  .footer-brand {
+    font-size: 1.2rem;
+  }
+  .footer-slogan {
+    font-size: 0.95rem;
+    padding: 0.2rem 0.7rem;
+  }
+  .footer-content {
+    padding: 0 0.5rem 1rem 0.5rem;
+  }
+  .animated-links {
+    gap: 1.1rem;
+  }
+  .footer-social-link {
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .about-modern-content h2,
+  .discover-modern h2,
+  .products-modern h2 {
+    font-size: 1.3rem;
+  }
+  .about-modern-image {
+    min-width: 120px;
+    max-width: 220px;
+  }
+  .about-modern-inner {
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+  }
+  .footer-social-link {
+    font-size: 1.2rem;
+  }
+  .footer-content {
+    padding-bottom: 0.2rem;
   }
 } 
