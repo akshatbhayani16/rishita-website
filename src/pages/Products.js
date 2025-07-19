@@ -1,5 +1,12 @@
 import React from 'react';
 import './Products.css';
+import Footer from '../components/Footer';
+
+const socialLinks = [
+  { href: 'https://instagram.com', icon: 'fab fa-instagram', label: 'Instagram' },
+  { href: 'https://facebook.com', icon: 'fab fa-facebook-f', label: 'Facebook' },
+  { href: 'https://twitter.com', icon: 'fab fa-twitter', label: 'Twitter' },
+];
 
 const products = [
   {
@@ -25,18 +32,21 @@ const products = [
 ];
 
 const Products = () => (
-  <div className="products-page">
-    <h2>Our Collection</h2>
-    <div className="products-grid">
-      {products.map((product, idx) => (
-        <div className="product-card" key={idx}>
-          <img src={product.image} alt={product.name} />
-          <h3>{product.name}</h3>
-          <p>{product.description}</p>
-        </div>
-      ))}
+  <>
+    <div className="products-page">
+      <h2>Our Collection</h2>
+      <div className="products-grid">
+        {products.map((product, idx) => (
+          <div className="product-card" key={idx}>
+            <img src={product.image} alt={product.name} />
+            <h3>{product.name}</h3>
+            <p>{product.description}</p>
+          </div>
+        ))}
+      </div>
     </div>
-  </div>
+    <Footer socialLinks={socialLinks} />
+  </>
 );
 
 export default Products; 

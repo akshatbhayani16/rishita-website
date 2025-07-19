@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
+import Footer from '../components/Footer';
 
 const featured = [
   {
@@ -48,7 +50,7 @@ const Home = () => (
       <div className="hero-content">
         <h1 className="brand-title">Rishita</h1>
         <p className="brand-tagline">Where Fashion Meets Timeless Elegance</p>
-        <a href="/products" className="hero-btn-modern">Shop Now</a>
+        <Link to="/products" className="hero-btn-modern">Shop Now</Link>
       </div>
     </section>
 
@@ -61,7 +63,7 @@ const Home = () => (
         <div className="about-modern-content">
           <h2>About Us</h2>
           <p>Rishita is a luxury brand specializing in exquisite purses and jewellery. Our journey began with a passion for timeless design and a commitment to quality craftsmanship. Each piece is thoughtfully created to add elegance and sophistication to your style. We believe in empowering individuals through unique accessories that tell a story.</p>
-          <a href="/about" className="about-link">Learn More</a>
+          <Link to="/about" className="about-link">Learn More</Link>
         </div>
       </div>
     </section>
@@ -83,33 +85,7 @@ const Home = () => (
     </section>
 
     {/* Footer Section */}
-    <footer className="home-footer footer-modern animated-footer">
-      <div className="footer-accent-bar" />
-      <div className="footer-content">
-        <div className="footer-brand">Rishita</div>
-        <div className="footer-slogan">Elevate Your Elegance</div>
-        <div className="footer-socials">
-          {socialLinks.map((link, idx) => (
-            <a
-              key={idx}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={link.label}
-              className="footer-social-link"
-            >
-              <i className={link.icon}></i>
-            </a>
-          ))}
-        </div>
-        <div className="footer-links animated-links">
-          <a href="/about">About</a>
-          <a href="/products">Products</a>
-          <a href="/contact">Contact</a>
-        </div>
-        <div className="footer-copy">&copy; {new Date().getFullYear()} Rishita. All rights reserved.</div>
-      </div>
-    </footer>
+    <Footer socialLinks={socialLinks} />
   </div>
 );
 
