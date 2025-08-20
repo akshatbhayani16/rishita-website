@@ -48,7 +48,7 @@ const Home = () => (
     <section className="home-hero-modern">
       <div className="hero-overlay" />
       <div className="hero-content">
-        <h1 className="brand-title">Rishita</h1>
+        <h1 className="brand-title">Tisya</h1>
         <p className="brand-tagline">Where Fashion Meets Timeless Elegance</p>
         <Link to="/products" className="hero-btn-modern">Shop Now</Link>
       </div>
@@ -58,11 +58,11 @@ const Home = () => (
     <section className="about-summary-section about-modern">
       <div className="about-modern-inner">
         <div className="about-modern-image">
-          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="About Rishita" />
+          <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80" alt="About Tisya" />
         </div>
         <div className="about-modern-content">
           <h2>About Us</h2>
-          <p>Rishita is a luxury brand specializing in exquisite purses and jewellery. Our journey began with a passion for timeless design and a commitment to quality craftsmanship. Each piece is thoughtfully created to add elegance and sophistication to your style. We believe in empowering individuals through unique accessories that tell a story.</p>
+          <p>Tisya is a luxury brand specializing in exquisite purses and jewellery. Our journey began with a passion for timeless design and a commitment to quality craftsmanship. Each piece is thoughtfully created to add elegance and sophistication to your style. We believe in empowering individuals through unique accessories that tell a story.</p>
           <Link to="/about" className="about-link">Learn More</Link>
         </div>
       </div>
@@ -72,7 +72,7 @@ const Home = () => (
     <section className="discover-section discover-modern">
       <h2>Discover Our World</h2>
       <p className="brand-story">
-        At Rishita, we blend artistry and craftsmanship to create accessories that define luxury. Our purses and jewellery are designed for those who appreciate sophistication and individuality. Step into a world where every detail tells a story.
+        At Tisya, we blend artistry and craftsmanship to create accessories that define luxury. Our purses and jewellery are designed for those who appreciate sophistication and individuality. Step into a world where every detail tells a story.
       </p>
       <div className="featured-grid">
         {featured.map((item, idx) => (

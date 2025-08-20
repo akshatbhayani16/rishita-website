@@ -1,99 +1,147 @@
-
 /* Footer.css */
 .footer {
-  background: #0f0f11;
-  color: #eaeaea;
-  padding: 3rem 1rem;
-  font-family: 'Inter', sans-serif;
+  background: linear-gradient(120deg, #2d1e10 80%, #4a3c28 100%);
+  color: #fdf6ed;
+  padding: 3rem 2rem 1.2rem 2rem;
+  font-family: 'Playfair Display', 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 -2px 24px rgba(212,175,55,0.08);
 }
 
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  border-bottom: 1px solid #333;
-  padding-bottom: 2rem;
 }
 
-.footer-section {
-  flex: 1 1 250px;
+.footer-brand {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: flex-start;
+  gap: 0.7rem;
 }
 
-.brand-name {
-  font-size: 1.8rem;
-  font-weight: 600;
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #d4af37;
+  letter-spacing: 2px;
+  margin-bottom: 0.2rem;
+}
+
+.footer-tagline {
+  font-size: 1.08rem;
+  color: #e6cfa7;
   letter-spacing: 1px;
-  margin-bottom: 0.25rem;
-  color: #ffffff;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.brand-tagline {
-  font-size: 1rem;
-  font-style: italic;
-  color: #aaa;
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
 }
 
-.footer-section.nav a {
-  color: #eaeaea;
+.footer-link {
+  color: #fdf6ed;
+  font-size: 1.12rem;
   text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  border-radius: 8px;
+  padding: 4px 12px;
+  transition: background 0.2s, color 0.2s;
+  letter-spacing: 0.5px;
 }
 
-.footer-section.nav a:hover {
-  color: #b48a78;
+.footer-link:hover {
+  background: #d4af37;
+  color: #2d1e10;
 }
 
-.contact-item {
-  font-size: 0.95rem;
-  color: #ccc;
+.footer-social {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.contact-item strong {
-  color: #fff;
+.footer-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: #d4af37;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1rem;
+  transition: background 0.25s, color 0.25s, box-shadow 0.25s, border 0.25s;
+  box-shadow: 0 2px 8px rgba(212,175,55,0.08);
+  text-decoration: none;
+}
+
+.footer-icon:hover {
+  background: #d4af37;
+  color: #2d1e10;
+  border-color: #e6cfa7;
+  box-shadow: 0 4px 16px rgba(212,175,55,0.18);
 }
 
 .footer-bottom {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 2.5rem;
+  font-size: 1rem;
+  color: #e6cfa7;
+  letter-spacing: 1px;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
-}
-
-.social-icons a {
-  color: #eaeaea;
-  font-size: 1.25rem;
-  transition: transform 0.2s, color 0.2s;
-}
-
-.social-icons a:hover {
-  color: #b48a78;
-  transform: scale(1.1);
-}
-
-.footer-copy {
-  font-size: 0.9rem;
-  color: #999;
-}
-
-@media (max-width: 768px) {
-  .footer-inner {
-    flex-direction: column;
-    align-items: center;
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
     text-align: center;
   }
-  .footer-section {
+  .footer-brand,
+  .footer-nav,
+  .footer-social {
     align-items: center;
+    justify-content: center;
+  }
+  .footer-nav {
+    flex-direction: row;
+    gap: 2rem;
+    margin: 1.2rem 0;
+  }
+  .footer-social {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 1.5rem 0.5rem 0.7rem 0.5rem;
+  }
+  .footer-logo {
+    font-size: 1.3rem;
+  }
+  .footer-tagline {
+    font-size: 0.9rem;
+  }
+  .footer-icon {
+    width: 26px;
+    height: 26px;
+    font-size: 0.95rem;
+  }
+  .footer-bottom {
+    font-size: 0.85rem;
+    margin-top: 1.2rem;
   }
 }

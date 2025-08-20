@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaInstagram, FaFacebookF, FaTwitter, FaPinterestP } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import './Footer.css';
 
@@ -10,40 +11,34 @@ const contactDetails = [
 
 const Footer = ({ socialLinks }) => (
   <footer className="footer">
-    <div className="footer-inner">
-      <div className="footer-section brand">
-        <h2 className="brand-name">Rishita</h2>
-        <p className="brand-tagline">Elevate Your Elegance</p>
+    <div className="footer-grid">
+      <div className="footer-brand">
+        <span className="footer-logo">Tisya</span>
+        <p className="footer-tagline">Luxury Jewellery & Purses</p>
       </div>
-      <div className="footer-section nav">
-        <Link to="/">Home</Link>
-        <Link to="/about">About</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/contact">Contact</Link>
-      </div>
-      <div className="footer-section contact">
-        {contactDetails.map((item, idx) => (
-          <div key={idx} className={`contact-item ${item.type}`}>
-            <strong>{item.label}:</strong> <span>{item.value}</span>
-          </div>
-        ))}
+      <nav className="footer-nav">
+        <Link to="/" className="footer-link">Home</Link>
+        <Link to="/about" className="footer-link">About</Link>
+        <Link to="/products" className="footer-link">Products</Link>
+        <Link to="/contact" className="footer-link">Contact</Link>
+      </nav>
+      <div className="footer-social">
+        <a href="https://instagram.com" className="footer-icon" aria-label="Instagram">
+          <FaInstagram />
+        </a>
+        <a href="https://facebook.com" className="footer-icon" aria-label="Facebook">
+          <FaFacebookF />
+        </a>
+        <a href="https://twitter.com" className="footer-icon" aria-label="Twitter">
+          <FaTwitter />
+        </a>
+        <a href="https://pinterest.com" className="footer-icon" aria-label="Pinterest">
+          <FaPinterestP />
+        </a>
       </div>
     </div>
     <div className="footer-bottom">
-      <div className="social-icons">
-        {socialLinks.map((link, idx) => (
-          <a
-            key={idx}
-            href={link.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={link.label}
-          >
-            <i className={link.icon}></i>
-          </a>
-        ))}
-      </div>
-      <p className="footer-copy">&copy; {new Date().getFullYear()} Rishita. All rights reserved.</p>
+      <span>© {new Date().getFullYear()} Tisya. All rights reserved.</span>
     </div>
   </footer>
 );
