@@ -1,7 +1,6 @@
 .home-root {
-  width: 100%;
-  min-height: 100vh;
-  background: #fbeee6;
+  background: linear-gradient(120deg, #f8f6f2 60%, #f5e9d7 100%);
+  font-family: 'Playfair Display', 'Segoe UI', Arial, sans-serif;
 }
 
 .home-hero-modern {
@@ -24,8 +23,14 @@
 .hero-content {
   position: relative;
   z-index: 2;
+  background: rgba(255,245,230,0.55);
+  border-radius: 32px;
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 3rem 1rem;
+  box-shadow: 0 8px 40px rgba(212,175,55,0.10);
+  backdrop-filter: blur(8px);
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .brand-title {
@@ -143,15 +148,26 @@
 }
 
 @media (max-width: 900px) {
-  .about-modern-inner {
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 2.5rem 1rem 2.5rem 1rem;
+  .home-hero { min-height: 60vh; }
+  .hero-title { font-size: 1.5rem; }
+  .hero-content { padding: 1.2rem 0.5rem; border-radius: 18px; max-width: 98vw; }
+  .collections-grid, .bestsellers-grid, .values-grid, .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
   }
-  .about-modern-content {
-    padding-left: 0;
-    text-align: center;
-  }
+  .collection-card, .bestseller-card, .value-card { border-radius: 12px; padding: 0.7rem 0.3rem; }
+  .collection-card img, .bestseller-card img, .gallery-img { height: 120px; border-radius: 12px 12px 0 0; }
+  .bestseller-info { padding: 0.7rem; }
+  .bestseller-name, .collection-name, .value-title { font-size: 1rem; }
+  .bestseller-cta, .hero-cta { font-size: 1rem; padding: 0.5rem 1.2rem; border-radius: 12px; }
+}
+@media (max-width: 600px) {
+  .home-hero { min-height: 40vh; }
+  .hero-title { font-size: 1.1rem; }
+  .section-title { font-size: 1rem; }
+  .gallery-img, .bestseller-card img, .collection-card img { height: 70px; border-radius: 8px 8px 0 0; }
+  .hero-content { padding: 0.7rem 0.2rem; border-radius: 7px; }
 }
 
 /* Discover Section - Modern Enhancements */
@@ -493,4 +509,282 @@
   .footer-content {
     padding-bottom: 0.2rem;
   }
-} 
+}
+
+/* Hero Banner */
+.home-hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: url('../images/hero-bg.webp') center center no-repeat;
+  background-size: cover;
+  z-index: 1;
+  filter: brightness(0.7);
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  background: rgba(255,245,230,0.55);
+  border-radius: 32px;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 8px 40px rgba(212,175,55,0.10);
+  backdrop-filter: blur(8px);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero-title {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  color: #b48a50;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+}
+.hero-tagline {
+  font-size: 1.3rem;
+  color: #5a2304;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.hero-cta {
+  display: inline-block;
+  background: #d4af37;
+  color: #2d1e10;
+  font-size: 1.15rem;
+  font-family: 'Playfair Display', serif;
+  padding: 0.8rem 2.2rem;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 2px 12px rgba(212,175,55,0.10);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.hero-cta:hover {
+  background: #b48a50;
+  color: #fff8f0;
+  box-shadow: 0 4px 24px rgba(212,175,55,0.18);
+}
+
+/* Featured Collections */
+.collections-section {
+  max-width: 1400px;
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem;
+}
+.collections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+.collection-card {
+  background: linear-gradient(120deg, #fff8f0 80%, #f7e9e3 100%);
+  border-radius: 24px;
+  box-shadow: 0 4px 18px rgba(212,175,55,0.08);
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: 1.5px solid #e6cfa7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collection-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 24px 24px 0 0;
+  transition: transform 0.3s;
+}
+.collection-card:hover {
+  box-shadow: 0 8px 32px rgba(212,175,55,0.16);
+  transform: translateY(-4px) scale(1.03);
+}
+.collection-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #b48a50;
+  margin: 1.2rem 0;
+  font-weight: 700;
+}
+
+/* Best Sellers */
+.bestsellers-section {
+  max-width: 1400px;
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem;
+}
+.bestsellers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.bestseller-card {
+  background: linear-gradient(120deg, #fff8f0 80%, #f7e9e3 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(212,175,55,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.2px solid #e6cfa7;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.bestseller-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+.bestseller-info {
+  padding: 1.2rem;
+  text-align: center;
+}
+.bestseller-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: #b48a50;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  display: block;
+}
+.bestseller-cta {
+  display: inline-block;
+  background: #d4af37;
+  color: #2d1e10;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  padding: 0.5rem 1.5rem;
+  border-radius: 18px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(212,175,55,0.10);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.bestseller-cta:hover {
+  background: #b48a50;
+  color: #fff8f0;
+  box-shadow: 0 4px 16px rgba(212,175,55,0.18);
+}
+
+/* Brand Values */
+.values-section {
+  max-width: 1400px;
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.value-card {
+  background: linear-gradient(120deg, #fff8f0 80%, #f5e9d7 100%);
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(212,175,55,0.08);
+  padding: 2rem 1.5rem;
+  border: 1.2px solid #e6cfa7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+  animation: fadeIn 1.2s ease;
+}
+.value-card:hover {
+  box-shadow: 0 8px 32px rgba(212,175,55,0.16);
+  transform: translateY(-4px) scale(1.03);
+  border: 1.5px solid #d4af37;
+}
+.value-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #d4af37;
+}
+.value-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #b48a50;
+  margin-bottom: 0.5rem;
+}
+.value-description {
+  font-size: 1rem;
+  color: #4a3c28;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+}
+
+/* Gallery */
+.gallery-section {
+  max-width: 1400px;
+  margin: 4rem auto 0 auto;
+  padding: 0 1rem 4rem 1rem;
+  text-align: center;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(212,175,55,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.gallery-img:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 32px rgba(212,175,55,0.16);
+}
+
+/* Animations */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlideIn 1.2s forwards;
+}
+@keyframes fadeSlideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .home-hero { min-height: 60vh; }
+  .hero-title { font-size: 1.5rem; }
+  .hero-content { padding: 1.2rem 0.5rem; border-radius: 18px; max-width: 98vw; }
+  .collections-grid, .bestsellers-grid, .values-grid, .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .collection-card, .bestseller-card, .value-card { border-radius: 12px; padding: 0.7rem 0.3rem; }
+  .collection-card img, .bestseller-card img, .gallery-img { height: 120px; border-radius: 12px 12px 0 0; }
+  .bestseller-info { padding: 0.7rem; }
+  .bestseller-name, .collection-name, .value-title { font-size: 1rem; }
+  .bestseller-cta, .hero-cta { font-size: 1rem; padding: 0.5rem 1.2rem; border-radius: 12px; }
+}
+@media (max-width: 600px) {
+  .home-hero { min-height: 40vh; }
+  .hero-title { font-size: 1.1rem; }
+  .section-title { font-size: 1rem; }
+  .gallery-img, .bestseller-card img, .collection-card img { height: 70px; border-radius: 8px 8px 0 0; }
+  .hero-content { padding: 0.7rem 0.2rem; border-radius: 7px; }
+}

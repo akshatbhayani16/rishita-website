@@ -22,7 +22,7 @@ const Navbar = () => {
       <ul className={`navbar-links${open ? ' open' : ''}`}>
         <li><Link to="/" onClick={closeMenu} className={location.pathname === '/' ? 'active' : ''}>Home</Link></li>
         <li><Link to="/about" onClick={closeMenu} className={location.pathname === '/about' ? 'active' : ''}>About</Link></li>
-        <li><Link to="/products" onClick={closeMenu} className={location.pathname === '/products' ? 'active' : ''}>Products</Link></li>
+        <li><Link to="/collections" onClick={closeMenu} className={location.pathname === '/products' ? 'active' : ''}>Collections </Link></li>
         <li><Link to="/contact" onClick={closeMenu} className={location.pathname === '/contact' ? 'active' : ''}>Contact Us</Link></li>
       </ul>
     </nav>
