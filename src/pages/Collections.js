@@ -1,5 +1,6 @@
 import React from "react";
 import "./Collections.css";
+import Footer from "../components/Footer";
 
 const products = [
   {
@@ -79,6 +80,9 @@ function Collections() {
             </a>
           ))}
         </div>
+      </section>
+      <section style={{ marginTop: "5rem" }}>
+        <Footer/>
       </section>
     </div>
   );
