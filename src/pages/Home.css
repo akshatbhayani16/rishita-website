@@ -167,7 +167,7 @@
   .hero-title { font-size: 1.1rem; }
   .section-title { font-size: 1rem; }
   .gallery-img, .bestseller-card img, .collection-card img { height: 70px; border-radius: 8px 8px 0 0; }
-  .hero-content { padding: 0.7rem 0.2rem; border-radius: 7px; }
+  .hero-content { padding: 0.7rem 0.2rem; border-radius: 7px; width: 250px;}
 }
 
 /* Discover Section - Modern Enhancements */

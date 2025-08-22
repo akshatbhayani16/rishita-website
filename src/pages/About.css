@@ -460,7 +460,10 @@ body {
     padding: 0.7rem 0.2rem;
     border-radius: 7px;
     min-width: 0;
-    max-width: 98vw;
+    width: 250px;
+  }
+  .about-details {
+    display: none;
   }
   .about-title {
     font-size: 1rem;
